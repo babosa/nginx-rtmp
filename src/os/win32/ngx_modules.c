@@ -52,6 +52,8 @@ extern ngx_module_t  ngx_http_headers_filter_module;
 extern ngx_module_t  ngx_http_copy_filter_module;
 extern ngx_module_t  ngx_http_range_body_filter_module;
 extern ngx_module_t  ngx_http_not_modified_filter_module;
+extern ngx_module_t  ngx_http_xslt_filter_module;
+
 extern ngx_module_t  ngx_rtmp_module;
 extern ngx_module_t  ngx_rtmp_auto_push_module;
 extern ngx_module_t  ngx_rtmp_cmd_module;
@@ -122,6 +124,7 @@ ngx_module_t *ngx_modules[] = {
 	&ngx_http_copy_filter_module,
 	&ngx_http_range_body_filter_module,
 	&ngx_http_not_modified_filter_module,
+	&ngx_http_xslt_filter_module,
 	&ngx_rtmp_module,
 	&ngx_rtmp_auto_push_module,
 	&ngx_rtmp_cmd_module,

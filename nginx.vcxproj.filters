@@ -474,6 +474,9 @@
     <ClCompile Include="src\core\ngx_regex.c">
       <Filter>源文件\core</Filter>
     </ClCompile>
+    <ClCompile Include="src\http\modules\ngx_http_xslt_filter_module.c">
+      <Filter>源文件\http\modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\src\os\win32\nginx.rc">

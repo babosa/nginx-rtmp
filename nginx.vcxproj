@@ -86,15 +86,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;NGX_WIN32;NGX_MAIL_SSL;NO_SYS_TYPES_H;FD_SETSIZE=1024;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;..;./src/core;./src/event;./src/event/modules;./src/os/win32;./src/http;./src/http/modules;./src/mail;./src/rtmp;./src/rtmp/hls;./auto/lib/openssl/include;./auto/lib/pcre;./auto/lib/zlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..;./src/core;./src/event;./src/event/modules;./src/os/win32;./src/http;./src/http/modules;./src/mail;./src/rtmp;./src/rtmp/hls;./auto/lib/openssl/include;./auto/lib/pcre;./auto/lib/zlib;./auto/lib/libxslt/include;./auto/lib/libxml/include;./auto/lib/iconv/include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4133</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;libeay32.lib;pcre.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>./auto/lib/openssl/out32dll;./auto/lib/pcre;./auto/lib/zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;libeay32.lib;pcre.lib;zlib.lib;libxml2.lib;libxslt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./auto/lib/openssl/out32dll;./auto/lib/pcre;./auto/lib/zlib;./auto/lib/libxml/lib;./auto/lib/libxslt/lib;./auto/lib/iconv/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -274,6 +275,7 @@
     <ClCompile Include="src\http\modules\ngx_http_rewrite_module.c" />
     <ClCompile Include="src\http\modules\ngx_http_secure_link_module.c" />
     <ClCompile Include="src\http\modules\ngx_http_sub_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_xslt_filter_module.c" />
     <ClCompile Include="src\rtmp\hls\ngx_rtmp_hls_module.c" />
     <ClCompile Include="src\rtmp\hls\ngx_rtmp_mpegts.c" />
     <ClCompile Include="src\rtmp\ngx_rtmp.c" />
